@@ -10,8 +10,7 @@
 enum choice { ROCK, PAPER, SCISSORS, INVALID };
 typedef enum choice choice_t;
 
-enum winner { USER, MACHINE, TIE };
-typedef enum winner winner_t;
+typedef enum { USER, MACHINE, TIE } winner_t;
 
 void         tolower_str(char *dest, int dest_size, const char *src);
 choice_t     set_user_choice(const char *input);
