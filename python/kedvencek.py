@@ -4,6 +4,7 @@ kedvencek = { "Peti": ["kutya", "macska", "aranyhal"],
               "Moricka": ["kutya", "aranyhal"],
               "Niki": ["nyul", "macska"] }
 
+# fuggvenyek:
 
 def van_e(gyerek, allat):
     if gyerek in kedvencek and allat in kedvencek[gyerek]:
@@ -23,16 +24,18 @@ def kiknek_van2(allat):
 
 
 def osszes_allat():
-   a = []
-   for lista in kedvencek.values():
-       for allat in lista:
-           a.append(allat)
-   return set(a)
+    a = []
+    for lista in kedvencek.values():
+        for allat in lista:
+            a.append(allat)
+    return set(a)
 
 def osszes_allat2():
- a = [allat for lista in kedvencek.values() for allat in lista]
- return set(a)
+    a = [allat for lista in kedvencek.values() for allat in lista]
+    return set(a)
 
+
+# "main" / tesztkod:
 
 print(kedvencek.keys())
 print(list(kedvencek.keys()))
