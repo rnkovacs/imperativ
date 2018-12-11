@@ -1,0 +1,125 @@
+### Teszt
+
+1. Mit ír ki a következő program?
+
+for (int idx = 2; idx <= 8; ++idx)
+    printf("%d, ", idx);
+
+(A) 2, 3, 4, 5, 6, 7, 8
+(B) 2, 3, 4, 5, 6, 7
+(C) 2, 3, 4, 5, 6, 7, 8, 9
+(D) nem fordul
+
+2. Mit ír ki a következő program?
+
+int a = 5;
+if (a-- == 4)
+    printf("res1");
+else if (a-- == 5)
+    printf("res2");
+else
+    printf("res3");
+
+(A) nem fordul
+(B) res1
+(C) res2
+(D) res3
+
+3. Melyik deklaráció felel meg a következőnek: egy karakterre mutató pointer-eket tartalmazó 5 elemű tömb.
+
+(A) char* array[5]
+(B) char array[5]
+(C) char* array
+(D) char (*) array[5]
+
+4. Mit állíthatunk a következő C programról?
+
+int main()
+{
+    int array[] = {1, 2, 3};
+    printf("%d", array[3]);
+}
+
+(A) output: 3
+(B) output: 0
+(C) segmentation fault
+(D) nem fordul
+
+5. Melyik kifejezést kell a ... helyére írni az alábbiak közül, hogy az upcase_ch változóban a ch karakter nagybetűs alakja tárolódjon?
+
+char ch = 'd';
+char upcase_ch = ...;
+
+(A) ch - ('a' - 'A')
+(B) 'A' - ch
+(C) 'A' - 'a' - ch
+(D) ch - '0'
+
+6. Melyik operátor a logikai nem (tagadás) operátor C-ben?
+
+(A) <>
+(B) !
+(C) !=
+(D) &&
+
+7. Mi a különbség az str1 és str2 sztringek között? (tárolás szempontjából)
+
+char str1[] = "first string";
+char* str2 = "second string";
+
+(A) semmi, hiszen a tömbök első elemre mutató pointerekké konvertálódnak
+(B) nem fordul
+(C) az str1 egy tömb lesz, aminek az elemei írhatóak, míg a "second string" tárolódik a heap-en amit str2 pointerrel érhetünk el írásra/olvasásra
+(D) az str1 egy tömb lesz, aminek az elemei írhatóak, míg a "second string" tárolódik egy potenciálisan nem írható memóriaterületen, aminek az első elemére mutat str2
+
+8. Mit ír ki a következő Python program?
+
+string = "this is my Python string"
+string[0] = 'T'
+print(string)
+
+(A) fordítási hiba: Python-ban a sztringek megváltoztatása nem lehetséges (immutable)
+(B) fordítási hiba: Python-ban a sztringek 1-től indexelődnek, a 0 érvénytelen index
+(C) "this is my Python string"
+(D) "This is my Python string"
+
+9. Melyik állítás hamis?
+
+(A) Python-ban az utasításokat ; karakterrel kell zárni
+(B) Python-ban nem szükséges előre deklarálni a változókat
+(C) Python-ban egy egész típusú változónak értékül adhatunk egy sztring típusú értéket
+(D) a Python interpretált nyelv
+
+10. Mit csinál a következő C kód?
+
+int array[] = {1, 2, 3, 4, 5};
+printf("%d", *(array + 2));
+
+(A) output: 3, a tömb első eleméhez (1) hozzáad 2-t
+(B) output: 3, kiírja a tömb 2 indexű elemét
+(C) nem fordul: az array szimbólum nem használható aritmetikai kifejezésben
+(D) nem fordul: az array tömb méretének fordítási időben ismertnek kell lennie
+
+
+### Programozási feladat
+
+Írj Python-ban és C-ben is egy `unpack` nevű függvényt, mely paraméterként egy olyan sztringet kap melyben [a-z] alakú 
+rövidítések szerepelnek. Eredményül egy olyan sztringet eredményez (nem a képernyőre írja!) melyben a rövidítések kifejtésre 
+kerültek. Tehát ha a rövidítéseket tartalmazó sztringben [a-d] szerepel, akkor a feloldás után az abcd karaktersorozatot 
+kapjuk. Elég az angol ABC kisbetűivel dolgozni.
+
+Például a "Ez egy példa [f-o] string"-re a helyes output: "Ez egy példa fghijklmno string". Vedd figyelembe, hogy egy 
+sztringben több rövidítés is lehet, azonban rövidítésen belül nem lehet másik rövidítés. Feltehető hogy a [ és ] karakterek 
+csak ezen célból fordulnak elő a sztringben, és mindegyik rövidítés helyesen van megadva. Azaz, ha feldolgozás során 
+találunk egy [ karaktert, akkor elvárhatjuk, hogy ehhez képest az 1. és a 3. karakter adja meg a kibontandó rövidítés elejét 
+illetve végét, továbbá, hogy a következő normál karakter az 5. pozíción szerepel a kezdő [ -höz képest. Továbbá feltehető, 
+hogy a rövidítések kibontása utáni sztring nem lesz hosszabb 1000 karakternél.
+
+Példa input:
+"Ezzel [f-o] bemutatom [a-z] az én [a-b] [b-b] programom [b-a]"
+
+Elvárt output:
+"Ezzel fghijklmno bemutatom abcdefghijklmnopqrstuvwxyz az én ab b programom "
+
+Az `unpack` függvényen kívül a megoldásod tartalmazzon egy olyan részt is amely bemutatja az `unpack` függvény működését a 
+fenti példa inputra (kiírja a képernyőre a rövidített és a kibontott sztringet is).
