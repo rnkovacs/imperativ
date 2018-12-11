@@ -45,7 +45,8 @@ int main()
 (C) segmentation fault
 (D) nem fordul
 
-5. Melyik kifejezést kell a ... helyére írni az alábbiak közül, hogy az upcase_ch változóban a ch karakter nagybetűs alakja tárolódjon?
+5. Melyik kifejezést kell a ... helyére írni az alábbiak közül, hogy az upcase_ch változóban a ch karakter nagybetűs alakja 
+tárolódjon?
 
 char ch = 'd';
 char upcase_ch = ...;
@@ -69,8 +70,10 @@ char* str2 = "second string";
 
 (A) semmi, hiszen a tömbök első elemre mutató pointerekké konvertálódnak
 (B) nem fordul
-(C) az str1 egy tömb lesz, aminek az elemei írhatóak, míg a "second string" tárolódik a heap-en amit str2 pointerrel érhetünk el írásra/olvasásra
-(D) az str1 egy tömb lesz, aminek az elemei írhatóak, míg a "second string" tárolódik egy potenciálisan nem írható memóriaterületen, aminek az első elemére mutat str2
+(C) az str1 egy tömb lesz, aminek az elemei írhatóak, míg a "second string" tárolódik a heap-en amit str2 pointerrel 
+érhetünk el írásra/olvasásra
+(D) az str1 egy tömb lesz, aminek az elemei írhatóak, míg a "second string" tárolódik egy potenciálisan nem írható 
+memóriaterületen, aminek az első elemére mutat str2
 
 8. Mit ír ki a következő Python program?
 
