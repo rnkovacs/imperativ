@@ -8,6 +8,6 @@ ELTE-IK 2018/2019 ősz
 - [Gyakorló mintaZH 2.](gyakorlo2.txt) ([megoldással](gyakorlo2_megoldas.c))
 - Néhány C feladat
   - [Jelszótörés](crack)
-  - [Kő-papir-olló](rock-paper-scissors)
+  - [Kő-papir-olló](rock_paper_scissors)
   - [Láncolt lista](list.c)
 - Néhány [Python feladat](python)
